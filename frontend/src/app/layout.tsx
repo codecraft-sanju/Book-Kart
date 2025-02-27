@@ -4,6 +4,7 @@ import "./globals.css";
 //import { Header } from "@radix-ui/react-accordion";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
+import LayoutWrapper from "@/app/LayoutWrapper";
 
 const roboto_mono = Roboto_Mono({
   
@@ -26,9 +27,11 @@ export default function RootLayout({
       <body
         className={`${ roboto_mono.className}`}
       >
-    <Header></Header>
+        <LayoutWrapper>
+    <Header/>
         {children}
-        <Footer/>
+          <Footer />
+          </LayoutWrapper>
       </body>
     </html>
   );
